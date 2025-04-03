@@ -4,7 +4,7 @@ module.exports = {
     getSaleReport: (req, res) => {
         getSaleReport((err, results) => {
 
-            if(err){
+            if (err) {
                 console.log(err);
                 return res.status(500).json({
                     success: 0,
