@@ -1,7 +1,7 @@
-const { saleFillterByDate } = require('../services/saleFilterByDate.service');
+const { incomeFilterByDate } = require('../services/incomeFilterByDate.service');
 
 module.exports = {
-    saleFillterByDate: (req, res) => {
+    incomeFilterByDate: (req, res) => {
 
         const start_date = req.query.start_date;
         const end_date = req.query.end_date;
@@ -13,7 +13,7 @@ module.exports = {
             });
         }
 
-        saleFillterByDate(start_date, end_date, (err, results) => {
+        incomeFilterByDate(start_date, end_date, (err, results) => {
             if (err) {
                 console.log(err);
                 return res.status(500).json({
